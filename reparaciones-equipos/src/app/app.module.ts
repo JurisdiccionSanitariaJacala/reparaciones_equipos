@@ -9,9 +9,19 @@ import { FooterComponent } from './footer/footer.component';
 import { AltaComputoComponent } from './equipo-computo/alta-computo/alta-computo.component';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AltaMedicoComponent } from './equipo-medico/alta-medico/alta-medico.component';
+import { BajaMedicoComponent } from './equipo-medico/baja-medico/baja-medico.component';
+import { BajaComputoComponent } from './equipo-computo/baja-computo/baja-computo.component';
+import { EquipoMedicoComponent } from './equipo-medico/equipo-medico.component';
+import { AltaReparacionComponent } from './equipo-computo/alta-reparacion/alta-reparacion.component';
 
 const ROUTES: Routes = [
-  {path: 'alta-computo', component: AltaComputoComponent}
+  {path: 'equipo-computo/alta-computo', component: AltaComputoComponent},
+  {path: 'equipo-computo/baja-computo' ,component: BajaComputoComponent},
+  {path: 'equipo-computo/alta-reparacion', component: AltaReparacionComponent },
+  {path: 'equipo-medico/alta-reparacion', component: AltaReparacionComponent},
+  {path: 'equipo-medico/alta-medico', component: AltaMedicoComponent},
+  {path: 'equipo-medico/baja-medico', component: BajaMedicoComponent}
 ]
 
 @NgModule({
@@ -20,7 +30,12 @@ const ROUTES: Routes = [
     EquipoComputoComponent,
     HeaderComponent,
     FooterComponent,
-    AltaComputoComponent
+    AltaComputoComponent,
+    AltaMedicoComponent,
+    BajaMedicoComponent,
+    BajaComputoComponent,
+    EquipoMedicoComponent,
+    AltaReparacionComponent
   ],
   imports: [
     BrowserModule,
