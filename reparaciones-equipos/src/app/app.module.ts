@@ -7,6 +7,12 @@ import { EquipoComputoComponent } from './equipo-computo/equipo-computo.componen
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AltaComputoComponent } from './equipo-computo/alta-computo/alta-computo.component';
+import { Routes, RouterModule, Router } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+const ROUTES(): Routes = [
+  {path: 'alta-computo', component: AltaComputoComponent}
+]
 
 @NgModule({
   declarations: [
@@ -18,7 +24,9 @@ import { AltaComputoComponent } from './equipo-computo/alta-computo/alta-computo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(ROUTES),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
