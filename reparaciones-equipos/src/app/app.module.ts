@@ -10,7 +10,7 @@ import { AltaComputoComponent } from './equipo-computo/alta-computo/alta-computo
 import { Routes, RouterModule, Router } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-const ROUTES(): Routes = [
+const ROUTES: Routes = [
   {path: 'alta-computo', component: AltaComputoComponent}
 ]
 
