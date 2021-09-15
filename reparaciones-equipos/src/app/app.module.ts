@@ -15,6 +15,7 @@ import { BajaComputoComponent } from './equipo-computo/baja-computo/baja-computo
 import { EquipoMedicoComponent } from './equipo-medico/equipo-medico.component';
 import { AltaReparacionComputoComponent } from './equipo-computo/alta-reparacion/alta-reparacion-computo.component';
 import { AltaReparacionMedicoComponent } from './equipo-medico/alta-reparacion/alta-reparacion.component';
+import { EquipoMedicoService } from './equipo-medico/equipo-medico.service';
 
 const ROUTES: Routes = [
   {path: 'equipo-computo/alta-computo', component: AltaComputoComponent},
@@ -47,7 +48,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [EquipoMedicoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
