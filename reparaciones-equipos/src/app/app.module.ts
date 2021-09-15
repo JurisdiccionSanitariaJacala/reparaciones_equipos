@@ -13,15 +13,18 @@ import { AltaMedicoComponent } from './equipo-medico/alta-medico/alta-medico.com
 import { BajaMedicoComponent } from './equipo-medico/baja-medico/baja-medico.component';
 import { BajaComputoComponent } from './equipo-computo/baja-computo/baja-computo.component';
 import { EquipoMedicoComponent } from './equipo-medico/equipo-medico.component';
-import { AltaReparacionComponent } from './equipo-computo/alta-reparacion/alta-reparacion.component';
+import { AltaReparacionComputoComponent } from './equipo-computo/alta-reparacion/alta-reparacion-computo.component';
+import { AltaReparacionMedicoComponent } from './equipo-medico/alta-reparacion/alta-reparacion.component';
 
 const ROUTES: Routes = [
   {path: 'equipo-computo/alta-computo', component: AltaComputoComponent},
   {path: 'equipo-computo/baja-computo' ,component: BajaComputoComponent},
-  {path: 'equipo-computo/alta-reparacion', component: AltaReparacionComponent },
-  {path: 'equipo-medico/alta-reparacion', component: AltaReparacionComponent},
+  {path: 'equipo-computo/alta-reparacion', component: AltaReparacionComputoComponent },
+  {path: 'equipo-medico/alta-reparacion', component: AltaReparacionMedicoComponent},
   {path: 'equipo-medico/alta-medico', component: AltaMedicoComponent},
-  {path: 'equipo-medico/baja-medico', component: BajaMedicoComponent}
+  {path: 'equipo-medico/baja-medico', component: BajaMedicoComponent},
+  {path: 'equipo-medico', component: EquipoMedicoComponent},
+  {path: 'equipo-computo', component: EquipoComputoComponent},
 ]
 
 @NgModule({
@@ -35,7 +38,8 @@ const ROUTES: Routes = [
     BajaMedicoComponent,
     BajaComputoComponent,
     EquipoMedicoComponent,
-    AltaReparacionComponent
+    AltaReparacionComputoComponent,
+    AltaReparacionMedicoComponent
   ],
   imports: [
     BrowserModule,
