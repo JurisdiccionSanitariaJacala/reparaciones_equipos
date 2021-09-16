@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {EquipoMedicoService} from './equipo-medico.service';
-import {EquipoMedico} from './equipoMedico';
+import { EquipoMedicoService } from './equipo-medico.service';
+import { EquiposMedicos } from './equipoMedico'; //IMPORTA ARCHIVO DE CLASE (.TS)
 
 @Component({
   selector: 'app-equipo-medico',
@@ -8,11 +8,11 @@ import {EquipoMedico} from './equipoMedico';
   styleUrls: ['./equipo-medico.component.css']
 })
 export class EquipoMedicoComponent implements OnInit {
-  equipoMedico: EquipoMedico[] = [];
+  equiposMedicos: EquiposMedicos[] = [];
   constructor(private EquipoMedicoService: EquipoMedicoService) { }
 
   ngOnInit(): void {
-    this.equipoMedico = this.EquipoMedicoService.getEquipoMedico();
+    this.equiposMedicos = this.EquipoMedicoService.getEquipoMedico();
   }
 
 }

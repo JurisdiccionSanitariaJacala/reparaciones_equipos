@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import {EquipoMedico} from './equipoMedico';
-import {EQUIPOMEDICO} from './EquiposMedicos.json';
+import {EquiposMedicos} from './equipoMedico';
+import {EQUIPOSMEDICOS} from './EquiposMedicos.json';
 
 @Injectable()
 export class EquipoMedicoService {
 
   constructor() { }
+  getEquipoMedico(): EquiposMedicos[]{
+    return EQUIPOSMEDICOS;
+  }
 }
