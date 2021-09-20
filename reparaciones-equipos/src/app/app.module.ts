@@ -16,8 +16,10 @@ import { EquipoMedicoComponent } from './equipo-medico/equipo-medico.component';
 import { AltaReparacionComputoComponent } from './equipo-computo/alta-reparacion/alta-reparacion-computo.component';
 import { AltaReparacionMedicoComponent } from './equipo-medico/alta-reparacion/alta-reparacion.component';
 import { EquipoMedicoService } from './equipo-medico/equipo-medico.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const ROUTES: Routes = [
+  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: 'equipo-computo/alta-computo', component: AltaComputoComponent},
   {path: 'equipo-computo/baja-computo' ,component: BajaComputoComponent},
   {path: 'equipo-computo/alta-reparacion', component: AltaReparacionComputoComponent },
@@ -26,6 +28,7 @@ const ROUTES: Routes = [
   {path: 'equipo-medico/baja-medico', component: BajaMedicoComponent},
   {path: 'equipo-medico', component: EquipoMedicoComponent},
   {path: 'equipo-computo', component: EquipoComputoComponent},
+  {path: 'dashboard', component: DashboardComponent}
 ]
 
 @NgModule({
@@ -40,7 +43,8 @@ const ROUTES: Routes = [
     BajaComputoComponent,
     EquipoMedicoComponent,
     AltaReparacionComputoComponent,
-    AltaReparacionMedicoComponent
+    AltaReparacionMedicoComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -6,11 +6,11 @@
       <div class="row align-items-start">
         <div class="col">
           <label for="exampleFormControlInput1" class="form-label">Clave CAMBS</label>
-          <input type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="I600000">
+          <input formControlName="claveCAMBSEMBaja" type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="I600000">
         </div>
         <div class="col">
           <label for="exampleFormControlInput1" class="form-label">Num. Inventario</label> <!--Dato requerido-->
-          <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="100">
+          <input formControlName="numInvEquipoMBaja" type="email" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="100">
         </div>
       </div> <!--CLAVES CAMBS Y INVENTARIO-->
     </div>
@@ -18,20 +18,21 @@
     <div class="row align-items-start">
       <div class="col">
         <label for="exampleFormControlInput1" class="form-label">Marca</label>
-        <input type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="Compaq">
+        <input formControlName="marcaEquipoMBaja" type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="Compaq">
       </div>
       <div class="col">
         <label for="exampleFormControlInput1" class="form-label">Modelo</label>
-        <input type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="DC-7800">
+        <input formControlName="modeloEquipoMBaja" type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="DC-7800">
       </div>
     </div>
   
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Motivo de baja</label>
-      <textarea class="form-control text-uppercase" id="exampleFormControlTextarea1" rows="3"></textarea>
-      <a href="" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Guardar</a>  
-      <a href="" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Salir</a>
+      <textarea formControlName="motivoBajaEM" class="form-control text-uppercase" id="motivoBajaEM" rows="3"></textarea>
     </div>        
-
+  </div>
+  <div class="container">
+    <a href="" class="btn btn-primary btn-lg active col-sm-12" role="button" aria-pressed="true">Guardar</a>  
+    <a href="" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Salir</a>
   </div>
   
