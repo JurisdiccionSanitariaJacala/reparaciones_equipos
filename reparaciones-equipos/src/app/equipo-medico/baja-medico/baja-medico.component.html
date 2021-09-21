@@ -1,10 +1,11 @@
+<form [formGroup]="formBajaMedico">
 <div class="container-md">
     <br>
     <h2>Baja de Equipos medicos</h2>
     <h5>Detalles del equipo a dar de Baja</h5>
-    <div class="mb-3">
+    <div class="mb-3">    
       <div class="row align-items-start">
-        <div class="col">
+        <div class="col">          
           <label for="exampleFormControlInput1" class="form-label">Clave CAMBS</label>
           <input formControlName="claveCAMBSEMBaja" type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="I600000">
         </div>
@@ -32,7 +33,6 @@
     </div>        
   </div>
   <div class="container">
-    <a href="" class="btn btn-primary btn-lg active col-sm-12" role="button" aria-pressed="true">Guardar</a>  
-    <a href="" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Salir</a>
+    <button type="submit" [disabled]="formBajaMedico.invalid" (click)="ShowFormValue()">Submit</button>
   </div>
-  
+</form>

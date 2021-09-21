@@ -30,8 +30,12 @@ export class BajaMedicoComponent implements OnInit {
   }
 
   ShowFormValue(){
-    console.log("Valor formulario: ", this.formBajaMedico
-    );
+    console.log("Valor formulario: ", this.formBajaMedico.getRawValue());
   }
 
+
+  this.formBajaMedico.valueChanges.subscribe((d:any)=>{
+    
+  }
+  )
 }

@@ -17,6 +17,8 @@ import { AltaReparacionComputoComponent } from './equipo-computo/alta-reparacion
 import { AltaReparacionMedicoComponent } from './equipo-medico/alta-reparacion/alta-reparacion.component';
 import { EquipoMedicoService } from './equipo-medico/equipo-medico.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 const ROUTES: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
@@ -50,7 +52,8 @@ const ROUTES: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(ROUTES),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [EquipoMedicoService],
   bootstrap: [AppComponent]
