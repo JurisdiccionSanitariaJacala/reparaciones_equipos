@@ -12,7 +12,7 @@ export class BajaMedicoComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder
-  ) { 
+  ) {
     this
   }
 
@@ -23,8 +23,8 @@ export class BajaMedicoComponent implements OnInit {
     this.formBajaMedico = this.formBuilder.group({
       claveCAMBSEMBaja: new FormControl(null, []),
       numInvEquipoMBaja: new FormControl(null, []),
-      marcaEquipoMBaja: new FormControl(null, []),
-      modeloEquipoMBaja: new FormControl(null, []),
+      marcaEquipoMBaja: new FormControl(null, [Validators.required]),
+      modeloEquipoMBaja: new FormControl(null, [Validators.required]),
       motivoBajaEM: new FormControl(null, [Validators.required])
     })
   }
@@ -32,10 +32,4 @@ export class BajaMedicoComponent implements OnInit {
   ShowFormValue(){
     console.log("Valor formulario: ", this.formBajaMedico.getRawValue());
   }
-
-
-  this.formBajaMedico.valueChanges.subscribe((d:any)=>{
-    
-  }
-  )
 }
