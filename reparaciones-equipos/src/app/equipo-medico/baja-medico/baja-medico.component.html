@@ -3,9 +3,9 @@
     <br>
     <h2>Baja de Equipos medicos</h2>
     <h5>Detalles del equipo a dar de Baja</h5>
-    <div class="mb-3">    
+    <div class="mb-3">
       <div class="row align-items-start">
-        <div class="col">          
+        <div class="col">
           <label for="exampleFormControlInput1" class="form-label">Clave CAMBS</label>
           <input formControlName="claveCAMBSEMBaja" type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="I600000">
         </div>
@@ -15,7 +15,7 @@
         </div>
       </div> <!--CLAVES CAMBS Y INVENTARIO-->
     </div>
-  
+
     <div class="row align-items-start">
       <div class="col">
         <label for="exampleFormControlInput1" class="form-label">Marca</label>
@@ -26,13 +26,13 @@
         <input formControlName="modeloEquipoMBaja" type="email" class="form-control form-control-sm text-uppercase" id="exampleFormControlInput1" placeholder="DC-7800">
       </div>
     </div>
-  
+
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Motivo de baja<a style="color:red;"> *</a></label>      
       <textarea formControlName="motivoBajaEM" class="form-control text-uppercase" id="motivoBajaEM" rows="3"></textarea>
-    </div>        
+    </div>
   </div>
   <div class="container">
-    <button type="submit" [disabled]="formBajaMedico.invalid" (click)="ShowFormValue()">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="formBajaMedico.invalid">Guardar</button>
   </div>
 </form>
