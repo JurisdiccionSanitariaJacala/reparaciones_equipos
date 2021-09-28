@@ -13,7 +13,7 @@ export class BajaMedicoComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder
   ) { 
-    this
+    this.InitForm();
   }
 
   ngOnInit(): void {
@@ -26,7 +26,12 @@ export class BajaMedicoComponent implements OnInit {
       marcaEquipoMBaja: new FormControl(null, []),
       modeloEquipoMBaja: new FormControl(null, []),
       motivoBajaEM: new FormControl(null, [Validators.required])
-    })
+    });
+
+    this.formBajaMedico.get('claveCAMBSEMBaja')?.valueChanges.subscribe(x=>{console.log(x);
+    });
+
+
   }
 
   ShowFormValue(){
@@ -34,8 +39,8 @@ export class BajaMedicoComponent implements OnInit {
   }
 
 
-  this.formBajaMedico.valueChanges.subscribe((d:any)=>{
+  /*this.formBajaMedico.valueChanges.subscribe((d:any)=>{
     
   }
-  )
+  )*/
 }
